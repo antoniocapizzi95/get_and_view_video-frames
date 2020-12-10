@@ -9,9 +9,9 @@ app = Flask(__name__)
 CORS(app)
 
 directory = ""
-def collect_thread():
+'''def collect_thread():
     url = 'https://www.youtube.com/watch?v=AmrrSfiMxGA'
-    collect_frames.collect_frames(url, directory_path=directory)
+    collect_frames.collect_frames(url, directory_path=directory)'''
 
 
 @app.route("/<index>", methods=['GET'])
@@ -22,6 +22,6 @@ def get_frame(index):
 
 
 if __name__ == '__main__':
-    collect_th = threading.Thread(target=collect_thread)
-    collect_th.start()
+    #collect_th = threading.Thread(target=collect_thread)
+    #collect_th.start()
     app.run(port=3000)
