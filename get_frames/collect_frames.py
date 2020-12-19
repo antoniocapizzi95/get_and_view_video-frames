@@ -3,8 +3,8 @@ import cv2
 from os import path
 
 yt_url = 'https://www.youtube.com/watch?v=AmrrSfiMxGA'
-interval = 10
-directory_path = ""
+interval = 30
+directory_path = "/mnt/gluster/"
 #def collect_frames(yt_url, interval=10, directory_path = ""):
 vPafy = pafy.new(yt_url)
 play = vPafy.getbest(ftypestrict=False, preftype="webm")
