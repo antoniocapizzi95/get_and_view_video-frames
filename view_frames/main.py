@@ -6,7 +6,7 @@ from flask import send_file
 app = Flask(__name__)
 CORS(app)
 
-directory = "/home/share/"
+directory = "/home/images/"
 
 
 
