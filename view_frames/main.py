@@ -10,6 +10,9 @@ directory = "/home/images/"
 
 @app.route("/", methods=['GET'])
 def get_directory_list():
+    elements = ""
+    for el in os.listdir(directory):
+        elements = elements + el + "\n"
     return os.listdir(directory)
 
 @app.route("/<index>", methods=['GET'])
