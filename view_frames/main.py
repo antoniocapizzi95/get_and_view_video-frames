@@ -17,7 +17,7 @@ def get_directory_list():
     for el in listdir:
         elements = elements + el + " - "
         count = count + 1
-    return "count: "+count+" - "+elements
+    return "count: "+str(count)+" - "+elements
 
 @app.route("/<index>", methods=['GET'])
 def get_frame(index):
