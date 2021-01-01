@@ -1,18 +1,19 @@
 from flask import Flask
 from flask_cors import CORS
 from flask import send_file
-
+import os
 
 app = Flask(__name__)
 CORS(app)
 
 directory = "/home/images/"
 
-
+@app.route("/", methods=['GET'])
+def get_directory_list():
+    return os.listdir(directory)
 
 @app.route("/<index>", methods=['GET'])
 def get_frame(index):
-
     return send_file(directory+"frame"+index+".jpg", mimetype='image/jpg')
 
 
