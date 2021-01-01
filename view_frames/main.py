@@ -11,7 +11,9 @@ directory = "/home/images/"
 @app.route("/", methods=['GET'])
 def get_directory_list():
     elements = ""
-    for el in os.listdir(directory):
+    listdir = os.listdir(directory)
+    listdir.sort()
+    for el in listdir:
         elements = elements + el + "\n"
     return elements
 
