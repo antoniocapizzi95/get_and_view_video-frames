@@ -1,0 +1,18 @@
+version: '3.3'
+services:
+    get_frames:
+        container_name: get_frames
+        build: ./get_frames
+        privileged: true
+        volumes:
+            - '/home/images:/home/images'
+        image: 'get_frames:latest'
+    view_frames:
+        ports:
+            - '3000:3000'
+        container_name: view_frames
+        build: ./view_frames
+        privileged: true
+        volumes:
+            - '/home/images:/home/images'
+        image: 'view_frames:latest'
