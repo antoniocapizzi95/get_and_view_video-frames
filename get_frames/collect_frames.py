@@ -3,7 +3,7 @@ import cv2
 from os import path
 
 yt_url = 'https://www.youtube.com/watch?v=AmrrSfiMxGA'
-interval = 40
+interval = 15
 directory_path = "/home/images/"
 
 vPafy = pafy.new(yt_url)
