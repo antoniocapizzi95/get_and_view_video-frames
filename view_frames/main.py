@@ -24,8 +24,5 @@ def get_frame(index):
     return send_file(directory+"frame"+index+".jpg", mimetype='image/jpg')
 
 
-
 if __name__ == '__main__':
-    #collect_th = threading.Thread(target=collect_thread)
-    #collect_th.start()
     app.run(port=3000)

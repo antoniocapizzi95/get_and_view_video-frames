@@ -3,9 +3,9 @@ import cv2
 from os import path
 
 yt_url = 'https://www.youtube.com/watch?v=AmrrSfiMxGA'
-interval = 30
+interval = 40
 directory_path = "/home/images/"
-#def collect_frames(yt_url, interval=10, directory_path = ""):
+
 vPafy = pafy.new(yt_url)
 play = vPafy.getbest(ftypestrict=False, preftype="webm")
 

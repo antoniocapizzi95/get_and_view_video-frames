@@ -14,8 +14,7 @@ RUN pip3 install opencv-contrib-python
 RUN pip3 install pafy
 RUN pip3 install youtube_dl
 
-#RUN mkdir /share
-# Copy the source from the current directory to the Working 
+# Copy the source from the current directory to the Working
 # Directory inside the container
 COPY . .
 

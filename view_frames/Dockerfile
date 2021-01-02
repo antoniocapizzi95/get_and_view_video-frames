@@ -1,7 +1,4 @@
-FROM ubuntu:18.04
-
-RUN apt update -y
-RUN apt install -y python3-pip python3-dev
+FROM python:latest
 
 # Set the Current Working Directory inside the container
 WORKDIR /app
@@ -17,6 +14,4 @@ COPY . .
 
 EXPOSE 3000
 # Command to run the executable
-#ENTRYPOINT ["gunicorn"]
-#CMD ["-b 0.0.0.0:3000 main:app"]
 CMD ["gunicorn"  , "-b", "0.0.0.0:3000", "main:app"]
