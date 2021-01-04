@@ -22,7 +22,7 @@ while success:
         try:
             if not path.exists(directory_path+"frame" + str(count) + ".jpg"):
                 cv2.imwrite(directory_path+'frame%d.jpg' % count, frame)
-                print('successfully written one frame')
+                print('successfully written a new frame, '+str(count))
             else:
                 print("frame already written, "+str(count))
             count += 1
